@@ -1,0 +1,227 @@
+
+
+<!doctype html>
+<html lang="en">
+<head>
+	<title>Payment Gateway</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+        
+	<link rel="stylesheet" href="Payment.css">
+</head>
+<body>
+        <div class="scrollbar" id="scrollbar2">
+
+
+	<div class="modal">
+		<form class="form" action="config.php" method="post">
+
+			<label class="input_label">Courses</label>
+			<div class="select-menu">
+				<div class="select-btn">
+					<span class="sBtn-text">Select your option</span>
+					<i class="bx bx-chevron-down"></i>
+				</div>
+				<ul class="options">
+					<li class="option" data-title="CSE" data-price="4000">
+						<i class="bx bxl-github" style="color: #171515;"></i>
+						<span class="option-text">Web Development Fundamentals</span>
+					</li>
+					<li class="option" data-title="EEE" data-price="3500">
+						<i class="bx bxl-instagram-alt" style="color: #E1306C;"></i>
+						<span class="option-text">Machine Learning for Beginners</span>
+					</li>
+					<li class="option" data-title="SE" data-price="3900">
+						<i class="bx bxl-linkedin-square" style="color: #0E76A8;"></i>
+						<span class="option-text">Cybersecurity Essentials</span>
+					</li>
+				
+				</ul>
+
+				
+			</div>
+			
+
+			<table>
+				<tbody id="root">
+					<!-- Product details will be displayed here -->
+				</tbody>
+			</table>
+
+
+			<div class="top">
+				
+				<h2>Total</h2>
+				<h2 id="totalB">TK 00.00</h2>
+			</div>
+
+
+			<div class="separator">
+				<hr class="line">
+			</div>
+
+
+
+			<div class="customer-info">
+				<div class="input_container" id="promobox">
+					<label for="promocode" class="input_label">Promo Code (Optional)</label>
+					<input class="input_field" type="text" placeholder="Enter Promo Code" id="promocode">
+                    <button id="promobtn" onclick="promo();"> 
+                        Apply
+                    </button> 
+                    
+				</div>
+
+				<div class="input_container">
+					<label class="input_label">E-mail</label>
+						<input class="input_field" type="text" name="Email" placeholder="@gmail.com">
+					</div>
+
+				<label class="input_label">Select a payment method</label>
+				<div class="paymentother">
+					
+
+					<button name="Bkash" type="button" id="Bkashbtn" onclick="displayText()"><img src="image svg/bkash.svg" class="icon" id="Bkash">
+						
+					</button>
+
+
+					<button name="Rocket" type="button" id="Rocketbtn" onclick="displayText1()">
+						<img src="image svg/rocket.svg" class="icon" id="Rocket">
+					</button>
+
+				
+					<button name="Nagad" type="button" id="Nagadbtn" onclick="displayText2()">
+						<img src="image svg/nagad.svg" class="icon" id="Bkash">
+					</button>
+
+
+				</div>
+
+				<div class="input_container" id="bkashreveal" style="display:none">
+					<br>
+					
+					Bkash Details
+					<br>
+					<br>
+
+1. Open up the bKash app & Choose “Send Money”
+<br>
+
+2. Enter the bKash Account Number, which is given down below
+<br>
+
+3. Enter the exact amount and Confirm the Transaction
+<br>
+
+4. After sending money, you’ll receive a bKash Transaction ID (TRX ID). If you are Sending the Money from AGENT NUMBER just type "AGENT"
+<br>
+
+<br>
+Account Type: Personal
+<br>
+<br>
+
+Account Number: 01602324083
+
+<br>
+<br>
+					<label class="input_label">Your Bkash Account Number</label>
+					<input class="input_field" type="number" name="BkashAccountNumber" placeholder="01XXXXXXXXX">
+					<label class="input_label">Bkash Transaction ID</label>
+					<input class="input_field" type="text" name="BkashTransactionID" placeholder="Txn ID">
+				</div>
+
+
+				<div class="input_container" id="rocketreveal" style="display:none">
+
+					<br>
+					Rocket Details
+					<br>
+					<br>
+
+1. Open up the Rocket app & Choose “Send Money”
+<br>
+
+2. Enter the Rocket Account Number, which is given down below
+<br>
+3. Enter the exact amount and Confirm the Transaction
+<br>
+4. After sending money, you’ll receive a Rocket Transaction ID (TRX ID). If you are sending the Money from AGENT NUMBER just type "AGENT"
+
+<br>
+<br>
+
+Account Type: Personal
+
+<br>
+<br>
+
+Account Number: 016023240837
+<br>
+<br>
+					<label class="input_label">Your Rocket Account Number</label>
+					<input class="input_field" type="number" name="RocketAccountNumber" placeholder="01XXXXXXXXXX">
+					<label class="input_label">Rocket Transaction ID</label>
+					<input class="input_field" type="text" name="RocketTransactionID" placeholder="Txn ID">
+				</div>
+
+
+				<div class="input_container" id="nagadreveal" style="display:none">
+					<br>
+					Nagad Details
+					<br>
+					<br>
+
+1. Open up the Nagad app & Choose “Send Money”
+<br>
+
+2. Enter the Nagad Account Number, which is given down below
+<br>
+
+3. Enter the exact amount and Confirm the Transaction
+<br>
+
+4. After sending money, you’ll receive a Nagad Transaction ID (TRX ID). If you are sending the Money from AGENT NUMBER just type "AGENT"
+
+<br>
+<br>
+
+
+Account Type: Personal
+<br>
+<br>
+
+Account Number: 01602324083
+<br>
+<br>
+
+					<label class="input_label">Your Nagad Account Number</label>
+					<input class="input_field" type="number" name="NagadAccountNumber" placeholder="01XXXXXXXXX">
+					<label class="input_label">Nagad Transaction ID</label>
+					<input class="input_field" type="text" name="NagadTransactionID" placeholder="Txn ID">
+				</div>
+
+                
+					
+				
+
+
+				</div>
+			
+
+			<button class="checkout" name="checkout" style="cursor: pointer;">
+				<span>Checkout</span>
+			</button>
+		</form>
+	</div>
+
+	</div>
+	
+
+	<script src="Payment.js"></script>
+</body>
+</html>

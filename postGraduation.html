@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intermediate Course</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        p {
+            color: #666;
+            line-height: 1.6;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            padding-top: 25px;
+            height: 0;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        @media only screen and (max-width: 600px) {
+            .container {
+                margin: 20px;
+                padding: 10px;
+            }
+            .video-container {
+                padding-bottom: 75%; /* Adjust aspect ratio for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Post Course</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vestibulum velit eget tortor consectetur, ac aliquam ligula tempor. Integer nec eros diam. Ut accumsan, urna at efficitur iaculis, turpis sapien consectetur nunc, et lacinia tortor risus sed ex. Vestibulum posuere interdum erat, vel lobortis lectus cursus nec. Quisque at dolor vel velit suscipit consectetur.</p>
+        <p>Integer accumsan ante ut nunc consequat, nec tempor ligula ultrices. Proin euismod nisi quis turpis viverra, sit amet sodales sem molestie. Fusce dapibus velit at ex malesuada varius. Maecenas pulvinar, leo sed consectetur venenatis, quam ex pharetra magna, non aliquet sem elit at enim. Maecenas posuere sem eget tincidunt condimentum.</p>
+        <p>Phasellus convallis consequat dui, a pellentesque lectus tristique non. Vivamus consectetur nunc sed justo vehicula laoreet. Nam fringilla purus id tellus tincidunt, sed viverra tortor tempor. Vestibulum euismod vehicula ligula, vitae vulputate elit ultrices sed.</p>
+        <p>Donec sit amet quam vel elit suscipit eleifend. Suspendisse potenti. Nullam vestibulum, purus vel egestas efficitur, nulla purus dapibus lorem, ut vehicula risus dolor nec erat. Curabitur vel magna eros.</p>
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/rfscVS0vtbw" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</body>
+</html>
+
