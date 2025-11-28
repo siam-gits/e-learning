@@ -1,4 +1,5 @@
 # E-Learning Platform
+![UI Preview](./e-learning.png)
 
 A simple and interactive learning platform designed for students, offering structured learning modules and a clean user experience.
 
